@@ -15,6 +15,22 @@ expr.toFunction('x y +')(10, 10) // == 20
 
 ```
 
+## custom operators
+
+To add custom operators to expr-tree, just add an 'operator object' to _expr.operators_ :
+```js
+var expr = require('expr-tree')
+
+// adding the operator
+expr.operators['myCustomOperator'] = {
+  // the function called to compute the value of this operator.
+  // the nth argument is written as '{n}'
+  js: 'myCustomOperator({0}, {1}, ..., {n})',
+  //  the number of arguments taken by the operator
+  n: number_arguments
+}
+```
+
 ## api
 
 The tree structure allow for the use of [t-js](https://github.com/aaronj1335/t-js).
@@ -30,6 +46,7 @@ var tree = {
 ```
 
 All the methods dealing with expressions contained in this library can take interchangeably a tree or the reverse polish notation (RPN) of an expression tree. They always output a tree : if you want a method to output RPN, wrap your calls inside *expr.toRPN(tree)*.
+
 The following methods are available:
 
 #### fromRPN
