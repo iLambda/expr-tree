@@ -1,5 +1,6 @@
 # expr-tree
 expr-tree is an expression tree system for node.js. This library provides methods to parse reverse polish notation (RPN) and useful functions to work with expression trees.
+This module is available on npm as [expr-tree](https://www.npmjs.com/package/expr-tree).
 
 ## install
 ```sh
@@ -171,6 +172,7 @@ The complexity is O(n), with n the number of nodes/leaves in the tree, or the nu
 ## release History
 
 * 0.1.0 Initial release
+  * 0.1.1 Minor changes (removed eval)
 
 ## license
 [MIT](http://opensource.org/licenses/MIT)
