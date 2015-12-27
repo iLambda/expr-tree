@@ -16,7 +16,6 @@ module.exports = {
     'min': { js: 'Math.min({0},{1})', n:2 },
     'max': { js: 'Math.max({0}, {1})', n:2 },
     'sqrt': { js: 'Math.sqrt({0})', n:1 },
-    'cbrt': { js: 'math.cbrt({0})', n:1 },
     'cos': { js: 'Math.cos({0})', n:1 },
     'sin': { js: 'Math.sin({0})', n:1 },
     'tan': { js: 'Math.tan({0})', n:1 },
