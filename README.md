@@ -3,8 +3,14 @@ expr-tree is an expression tree system for node.js. This library provides method
 This module is available on npm as [expr-tree](https://www.npmjs.com/package/expr-tree).
 
 ## install
+If you're using node.js and npm, type into a terminal :
 ```sh
 $ npm install expr-tree --save
+```
+
+If you're using the browser, add to the beginning of your file:
+```html
+<script src="expr-tree.min.js"></script>
 ```
 
 ## example
@@ -173,6 +179,7 @@ The complexity is O(n), with n the number of nodes/leaves in the tree, or the nu
 
 * 0.1.0 Initial release
   * 0.1.1 Minor changes (removed eval)
+  * 0.1.2 Added browser support
 
 ## license
 [MIT](http://opensource.org/licenses/MIT)

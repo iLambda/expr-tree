@@ -1,10 +1,11 @@
 {
   "name": "expr-tree",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "An expression tree system for node.js. This library provides methods to parse Reverse Polish Notation (RPN) and useful functions to analyse and work with expression trees.",
   "main": "lib/expr-tree.js",
   "scripts": {
-    "test": "node test/expr-tree.js"
+    "test": "node test/expr-tree.js",
+    "browserify": "browserify exports.js > expr-tree.js && uglifyjs expr-tree.js > expr-tree.min.js"
   },
   "repository": {
     "type": "git",
