@@ -339,8 +339,6 @@ module.exports = {
       }
     }
 
-    // args
-    args = _.union(args, minargs).sort()
     // getting the expr
     var infix = express(expr, this.operators)
     return new Function(args, 'return ' + infix)
