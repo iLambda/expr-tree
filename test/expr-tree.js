@@ -103,12 +103,20 @@ test('expr.copy', function (assert) {
   var tree = expr.fromRPN('y y * x x * + sqrt 2 *')
   assert.equal('y y * x x * + sqrt 2 *', expr.toRPN(expr.copy('y y * x x * + sqrt 2 *')))
   /*
-   *  The method copy has been tested, and works perfectly. However, due to
+   *  The method copy has been tested, and works. However, due to
    *  the inner workings of deep equal, and the fact that the trees display
    *  a circular structure due to the 'parent' attribute, the following assertion
    *  must stay commented for the unit tests to be validated.
    */
   //assert.deepEqual(tree, expr.copy(tree))
+  // end the test
+  assert.end()
+})
+
+test('expr.compose', function (assert) {
+  // testing the copy method
+  assert.equal('y y * x + sqrt', expr.compose('y x + sqrt', 'y', 'y y *'))
+  assert.equal('y y * x x * + sqrt', expr.compose(expr.compose('y x + sqrt', 'y', 'y y *'), 'x', 'x x *'))
   // end the test
   assert.end()
 })
